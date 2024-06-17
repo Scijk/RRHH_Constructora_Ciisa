@@ -1,0 +1,24 @@
+/* Estilos adicionales según sea necesario */
+body {
+    background-color: #f8f9fa; /* Color de fondo */
+    color: #495057; /* Color de texto */
+    padding-top: 60px; /* Para fijar el navbar */
+}
+/* Estilos adicionales para los registros de usuarios */
+.user-card {
+    margin-bottom: 20px;
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+#usuarios-lista .card-wrapper {
+    margin: 0px; /* Espacio entre las tarjetas */
+    background-color: transparent; /* Fondo transparente */
+}
+#usuarios-lista .card-body {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Fondo gris claro */
+}
+#usuarios-lista .card-body button {
+    margin-top: 10px;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Personal - Constructora</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="constructora.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <a class="navbar-brand" href="#">Constructora ConstruCiisa</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#proposito">Propósito</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#usuarios">Usuarios</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#agregar-usuario">Agregar Usuario</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Propósito de la página -->
+<section id="proposito" class="container py-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h2 class="text-center mb-4">Propósito de la página</h2>
+      <p class="text-center">Administración de los usuarios en el sistema. Se pueden agregar usuarios, los que se verán reflejados en la cuadrícula. Permite además eliminar estos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Usuarios -->
+<section id="usuarios" class="container-fluid bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Usuarios Registrados</h2>
+    <div class="row" id="usuarios-lista">
+      
+      <!-- Ejemplo de user-cards (puedes añadir más según sea necesario) -->
+      <div class="col-md-6 col-lg-3 card-wrapper">
+        <div class="card user-card">
+          <div class="card-body">
+            <h5 class="card-title">Juan Pérez</h5>
+            <p class="card-text">juan.perez@example.com</p>
+            <p class="card-text"><strong>Cargo:</strong> Ingeniero Civil</p>
+            <p class="card-text"><strong>Ingreso:</strong> 2023-01-15</p>
+            <button class="btn btn-danger eliminar-usuario">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3 card-wrapper">
+        <div class="card user-card">
+          <div class="card-body">
+            <h5 class="card-title">María García</h5>
+            <p class="card-text">maria.garcia@example.com</p>
+            <p class="card-text"><strong>Cargo:</strong> Arquitecta</p>
+            <p class="card-text"><strong>Ingreso:</strong> 2022-11-30</p>
+            <button class="btn btn-danger eliminar-usuario">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3 card-wrapper">
+        <div class="card user-card">
+          <div class="card-body">
+            <h5 class="card-title">Pedro López</h5>
+            <p class="card-text">pedro.lopez@example.com</p>
+            <p class="card-text"><strong>Cargo:</strong> Supervisor</p>
+            <p class="card-text"><strong>Ingreso:</strong> 2023-02-20</p>
+            <button class="btn btn-danger eliminar-usuario">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 col-lg-3 card-wrapper">
+        <div class="card user-card">
+          <div class="card-body">
+            <h5 class="card-title">Laura Martínez</h5>
+            <p class="card-text">laura.martinez@example.com</p>
+            <p class="card-text"><strong>Cargo:</strong> Jefe de Proyecto</p>
+            <p class="card-text"><strong>Ingreso:</strong> 2022-12-10</p>
+            <button class="btn btn-danger eliminar-usuario">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Agregar Usuario -->
+<section id="agregar-usuario" class="container py-5">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <h2 class="text-center mb-4">Agregar Nuevo Usuario</h2>
+      <form id="form-agregar-usuario">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre">
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" id="apellido" name="apellido">
+        </div>
+        <div class="form-group">
+          <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" id="fecha-nacimiento" name="fecha-nacimiento">
+        </div>
+        <div class="form-group">
+          <label for="email">Correo Electrónico</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="cargo">Cargo</label>
+          <input type="text" class="form-control" id="cargo" name="cargo">
+        </div>
+        <div class="form-group">
+          <label for="fecha-ingreso">Fecha de Ingreso</label>
+          <input type="date" class="form-control" id="fecha-ingreso" name="fecha-ingreso">
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Usuario</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Confirmar Agregar Usuario -->
+<div class="modal fade" id="modal-confirmar" tabindex="-1" role="dialog" aria-labelledby="modal-confirmar-label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-confirmar-label">Confirmar Agregar Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro que desea agregar este usuario?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" id="btn-confirmar-agregar">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Confirmar Eliminar Usuario -->
+<div class="modal fade" id="modal-eliminar" tabindex="-1" role="dialog" aria-labelledby="modal-eliminar-label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-eliminar-label">Confirmar Eliminar Usuario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Está seguro que desea eliminar este usuario?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-danger" id="btn-confirmar-eliminar">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS y scripts personalizados -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="constructora.js"></script>
+
+</body>
+</html>
